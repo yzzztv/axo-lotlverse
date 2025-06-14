@@ -95,6 +95,11 @@
       text-decoration: underline;
     }
 
+     #contract:hover {
+      color: #00ffff;
+        }
+    
+
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
       .section { padding: 40px 15px; }
@@ -130,7 +135,10 @@
     <p><strong>Ticker:</strong> $AXO</p>
     <p><strong>Chain:</strong> Solana</p>
     <p><strong>Contract Address:</strong></p>
-    <p>BGSq4MAPd8V6TYRqgKrgNeAWyDNfiABfMsGR4fRpwBLV</p>
+    <p id="contract" onclick="copyCA()" style="cursor: pointer; text-decoration: underline;">
+      BGSq4...fRpwBLV
+    </p>
+
     <ul>
       <li>35% Community Airdrop (CNFT holders & early frens)</li>
       <li>25% Liquidity & LP incentives</li>
@@ -179,5 +187,16 @@
       observer.observe(section);
     });
   </script>
+  <script>
+  function copyCA() {
+    const fullCA = "BGSq4MAPd8V6TYRqgKrgNeAWyDNfiABfMsGR4fRpwBLV";
+    navigator.clipboard.writeText(fullCA).then(() => {
+      alert("Contract address copied to clipboard!");
+    }).catch(err => {
+      alert("Failed to copy contract address.");
+    });
+  }
+  </script>
+  
 </body>
 </html>
