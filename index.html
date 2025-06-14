@@ -67,11 +67,43 @@
       display: block;
       margin: 20px auto;
       max-width: 100px;
+      border-radius: 50%;
+    }
+
+    footer {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    .contact-link {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 0.95rem;
+    }
+
+    .contact-link a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    .contact-link a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
       .section { padding: 40px 15px; }
+      .contact-link {
+        position: static;
+        margin-top: 10px;
+        text-align: center;
+        display: block;
+      }
     }
   </style>
 </head>
@@ -123,6 +155,13 @@
     <p>Because this ain’t just a meme — it’s a movement. Axolotlverse blends NFTs, community, governance, and vibes into one sea of opportunity. You’re still early, and the tide is just rising.</p>
     <p><strong>Grab your snorkel. Stack your $AXO. Let’s swim.</strong></p>
   </section>
+
+  <footer>
+    <div class="contact-link">
+      <a href="mailto:lotlverse@gmail.com">Contact us for collab</a>
+    </div>
+    <p>© Axolotlverse 2025–2030</p>
+  </footer>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
