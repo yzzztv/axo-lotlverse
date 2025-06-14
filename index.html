@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Axolotlverse - Dive Into the Meme</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #001f3f, #0074D9, #39CCCC);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .section {
+      padding: 80px 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 40px;
+      margin: 40px auto;
+      width: 90%;
+      max-width: 960px;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .bubble-button {
+      background-color: #00d1b2;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .bubble-button:hover {
+      background-color: #39CCCC;
+      transform: scale(1.05);
+    }
+
+    .token-logo {
+      display: block;
+      margin: 20px auto;
+      max-width: 100px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .section { padding: 40px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌊 Yo fren, welcome to the Axolotlverse 🌊</h1>
+    <p>From CNFTs to the ocean's own memecoin — it's time to dive deep 💧</p>
+    <div class="buttons">
+      <a href="https://twitter.com/yourusername" class="bubble-button">Twitter</a>
+      <a href="https://dexscreener.com/" class="bubble-button">Dexscreener</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>🐟 What is Axolotlverse?</h2>
+    <p>Axolotlverse is a chaotic, cute, underwater ecosystem built on Solana. It began with our early CNFT drop on Drip Haus — a wave of personality-packed axolotls dripping with style, lore, and community vibes.</p>
+    <p>Now, the world expands with $AXO — a token made for the degen, the collector, the lore lover, and you. Your NFTs aren't just JPEGs anymore, they're your ticket into governance, memes, and exclusive perks.</p>
+  </section>
+
+  <section class="section">
+    <h2>💰 Tokenomics</h2>
+    <img src="logotoken.png" alt="Token Logo" class="token-logo">
+    <p><strong>Project:</strong> Axolotlverse</p>
+    <p><strong>Ticker:</strong> $AXO</p>
+    <p><strong>Chain:</strong> Solana</p>
+    <p><strong>Contract Address:</strong> To be announced</p>
+    <ul>
+      <li>35% Community Airdrop (CNFT holders & early frens)</li>
+      <li>25% Liquidity & LP incentives</li>
+      <li>20% Ecosystem growth & staking</li>
+      <li>10% Treasury</li>
+      <li>10% Team (locked + vested)</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>📅 Roadmap</h2>
+    <ul>
+      <li>✅ Q2 2025 - CNFT launch on Drip Haus</li>
+      <li>✅ Q2 2025 - Website live</li>
+      <li>✅ Q3 2025 - Launch $AXO</li>
+      <li>🔄 Q3 2025 - Start building community</li>
+      <li>🔜 Q4 2025 - Introduce staking, lore voting, & limited-edition NFT evolution events</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>🌈 Why Ape Into $AXO?</h2>
+    <p>Because this ain’t just a meme — it’s a movement. Axolotlverse blends NFTs, community, governance, and vibes into one sea of opportunity. You’re still early, and the tide is just rising.</p>
+    <p><strong>Grab your snorkel. Stack your $AXO. Let’s swim.</strong></p>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
